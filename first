@@ -1,0 +1,6 @@
+#this project will give you two questions and those two answers will give you the brand name of your new beer brand
+
+print("Hello and welcome to the brand name generator!\nPlease answer the following questions.")
+
+print(input("What is the name of your first pet: ") + "\n" + input("Whats your favorite color: ")) 
+
