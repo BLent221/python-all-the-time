@@ -1,0 +1,43 @@
+#The task is as follows: You are going to create a program that first asks the user to
+#enter text. It can be any text, an entire article, a paragraph, a sentence, a poem,
+#whatever you want. Then the program will ask the user to enter three random letters.
+#From that moment on, our code is going to process that information and result in five
+#different types of analysis: 
+
+
+user = input("Enter your desired text here: ")
+letter = []
+
+user = user.lower()
+letter.append(input("Enter your first letter here: ").lower())
+letter.append(input("Enter your second letter here: ").lower())
+letter.append(input("Enter your third letter here: ").lower())
+
+print("\n")
+print("Letter repetition: ")
+
+letter_rep1 = user.count(letter[0])
+letter_rep2 = user.count(letter[1])
+letter_rep3 = user.count(letter[2])
+
+print(f"We have found that this letter {letter[0]} repeaed {letter_rep1} times: ")
+print(f"We have found that this letter {letter[1]} repeaed {letter_rep2} times: ")
+print(f"We have found that this letter {letter[2]} repeaed {letter_rep3} times: ")
+
+user_change = user.split()
+
+print(f"This is the amount of words in the whole paragraph: {len(user_change)}")
+
+user_start1 = user_change[0]
+user_start2 = user_change[-1]
+
+print(f"This the fisr word of the paragraph: {user_start1}")
+print(f"And this is the last: {user_start2}")
+
+user_change.reverse()
+join_us = " ".join(user_change)
+
+print(f"This is the paragraph reversed: {join_us}")
+
+print("python" in user)
+
