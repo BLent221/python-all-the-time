@@ -1,0 +1,38 @@
+# If the number the user said is less than 1 or greater than 100, it will tell them that
+#he/she has chosen a number that is out of play.
+
+# If the number the user chose is less than the number the program thought of, it will tell
+#them that the answer is wrong, and that he/she chose a lower number than the secret
+#number.
+
+# If the user chose a number greater than the secret number, it will let them know that it
+#was greater.
+
+# And if the user got the secret number right, they will be informed that they have won,
+#and how many tries that has taken them.
+
+# If the user has not guessed correctly in their first attempt, they will be asked again to
+#choose another number and so on until they win or until their eight attempts are done. 
+from random import randint
+
+guess = 0
+secret_number = randint(1, 100)
+estimation = 0
+name = input("Tell me your name: ")
+
+print(f"Ok {name}, I have thought of a number between 1 and 100\nYou have 8 guesses to guess")
+
+while guess < 8:
+    estimation = int(input("What is the number?: "))
+    guess += 1
+
+    if estimation < secret_number:
+        print("My number is higher")
+    elif estimation > secret_number:
+        print("My number is lower")
+    else:
+        print(f"Congratulation {name}! You have guessed in {guess} attempts")
+        break
+
+if estimation != secret_number:
+    print(f"Sorry, we have run out of attempts. The secret number was {secret_number}")
